@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <RootNamespace>GMIS</RootNamespace>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20180726102624_Upgrade_ABP_380.cs" />
+    <Compile Remove="Migrations\20180927062408_test.cs" />
+    <Compile Remove="Migrations\20190111071724_Upgraded_To_Abp_v4_1_0.cs" />
+    <Compile Remove="Migrations\20190329084803_projectInformation.cs" />
+    <Compile Remove="Migrations\20190329085830_projectInformation.cs" />
+    <Compile Remove="Migrations\20190329090920__projectInfos.cs" />
+    <Compile Remove="Migrations\20190410093541_socialInfoEntity.cs" />
+    <Compile Remove="Migrations\20190425131700_locationDBUpdated.cs" />
+    <Compile Remove="Migrations\20190503142535_EngineringModuleAdded.cs" />
+    <Compile Remove="Migrations\20190508072716_EngineringModuleAdded.cs" />
+    <Compile Remove="Migrations\20190512071800_EnginerringModelUpdate.cs" />
+    <Compile Remove="Migrations\20190512081105_EnginerringModelUpdates.cs" />
+    <Compile Remove="Migrations\20190515074842_UpdateChanges.cs" />
+    <Compile Remove="Migrations\20190602081237_FinalUpdateChanges.cs" />
+    <Compile Remove="Migrations\20190625113216_NewUpdates.cs" />
+    <Compile Remove="Migrations\20190625113216_NewUpdates.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GMIS.Core\GMIS.Core.csproj" />
+  </ItemGroup>
+</Project>
